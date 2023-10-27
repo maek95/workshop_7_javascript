@@ -1,0 +1,51 @@
+<script>
+  // The last examples used forEach to iterate over an array. .forEach() invoked
+  // a function for each item in an array, but doesn't actually return anything.
+ /*  debugger; */
+
+  const dogs = ["Labrador", "Beagle", "Poodle", "Pug", "Chihuahua"]
+
+  // This function is similar to the last task of the iteration challenges, except
+  // it returns a string from the function instead of using console.log().
+  const doggieWalks = dogs.forEach((dogName) => { // dogName stores the element in the current loop temporarily until next loop begins.
+    return "The " + dogName + " needs to go for a walk!";
+  })
+
+  // Task 1: Use console.log to log the `doggieWalks` variable below to see what was
+  // actually returned from .forEach()
+  console.log(doggieWalks); // returns undefined... we need to log the result in every loop..! 
+
+
+  // Task 2: Now change .forEach to .map on line 9 and run the code again.
+  // See the difference? .map() returns the values from the function. The `return`
+  // in the mapping function is very important. Try removing it to see what happens.
+
+  const map_doggieWalks = dogs.map((dogName) => { 
+   // console.log("'map' with no return"); 
+
+   // if we remove the return argument below this it will still return a string-array but with values "undefined" since it is moving through the dogs-array.
+   return "The " + dogName + " needs to go for a walk!";
+  }) // returned values get stored in a string-array...!
+
+  console.log(map_doggieWalks); 
+
+  // Task 3: Create a new variable called `shoutyDogNames` and assign it to a new
+  // dogs.map() call. Inside the dogs.map() call, write a function which returns a
+  // dog's name in uppercase. Finally, log the `shoutyDogNames` variable.
+  
+  const shoutyDogNames = dogs.map((dogName) => {
+    return "The " + dogName.toUpperCase() + " needs to go for a walk!";
+  })
+
+  console.log(shoutyDogNames);
+
+  // försökte göra det ovan men med en vanlig funktion.. funkade inte..
+/*   function fun_shoutyDognames(dogName) {
+    return "The " + dogName + " needs to go for a walk!";
+  }
+  console.log(fun_shoutyDognames(dogs.map(dogName))); */
+
+
+</script>
+
+<p>Open the console in the browser to see the output of this script.</p>
