@@ -30,11 +30,17 @@
 
   // Task 3: Use the dot notation to print the name and age properties from the person
   // object using console.log.
+  console.log(person.name);
+  console.log(person.age);
+
 
 
   // Task 4: You can add a property to an object using the dot notation and using assignment to
   // set a its value. Do this to add a new property to the person object with the key `eyeColor`
   // and value being a string with the color of your eyes.
+
+  person.eyeColor = "green-grey";
+  console.log("eyecolor:", person.eyeColor);
 
 
   // Task 5: Objects can be nested within other objects. To fetch a value, you must chain
@@ -51,6 +57,9 @@
       }
     }
   }
+
+  console.log(dogs.labrador.puppy.name);
+  
 
 </script>
 
